@@ -14,5 +14,18 @@ public class Voiture extends Vehicule {
     public void emettreSon() {
         System.out.println("La voiture vrombit.");
     }
+
+    public void info(){
+        System.out.println(modele + annee);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Voiture v =(Voiture) obj;
+
+        //pour comparer une chaine de caractére entre deux objet
+        return this.modele.equals(v.modele) && this.annee == v.annee ;
+    }
+
 }
 
